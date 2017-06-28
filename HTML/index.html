@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Primer pagina</title>
+	<link rel="stylesheet" href="CSS/hoja1.css">
+	<style>
+		.div{
+
+		}
+	</style>
+</head>
+<body>
+<h1>A web page</h1>
+<p id="demo"></p>
+<button type="button" onclick="myFunction()">Try it</button>
+	
+</body>
+</html>
+<script>
+	var demo = document.getElementById("demo");
+
+	function myFunction()
+	{
+		var fecha = new Date();
+		document.write("Obtener fecha: " + fecha.getDate());
+		document.write("\nObtener dia: " + fecha.getDay());
+		document.write("\nObtener año completo: " + fecha.getFullYear());
+		document.write("\nObtener horas: " + fecha.getDate());
+		document.write("\nObtener milisegundos: " + fecha.getDate());
+		document.write("\nObtener minutos: " + fecha.getDate());
+		document.write("\nObtener mes: " + fecha.getDate());
+		document.write("\nObtener segundos: " + fecha.getDate());
+		document.write("\nObtener tiempo: " + fecha.getDate());
+	}
+</script>

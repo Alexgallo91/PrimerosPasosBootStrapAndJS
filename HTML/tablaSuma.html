@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejemplo suma con Javascript</title>
+	<link rel="stylesheet" href="">
+	<style>
+		.inputSuma
+		{
+			width: 100px;
+			height: 15px;
+			background-color: black;
+			color: #13FF2F;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>Ejemplo de suma con Javascript</h1>
+	<br>
+	<table>
+		<caption>Ejemplo de suma con JS</caption>
+		<thead>
+			<tr>
+				<th>header</th>
+			</tr>
+		</thead>
+		<tbody15			<tr>
+				<td><input type="number" id="numero1" class="inputSuma" required></td>
+				<td><input type="number" id="numero2" required></td>
+				<td><button type="button" id="bot1" onclick="sumar()">Sumar</button></td>
+				<td><input type="text" id="mostrarSuma" value="0.0" readonly></td>
+				<td><button type="button" id="limpiar" onclick="limpiar()">Limpiar</button></td>
+			</tr>
+		</tbody>
+	</table>
+
+
+	<script>
+		//suma los dos numeros
+		function sumar()
+		{
+			var numero1 = document.getElementById("numero1").value;
+			var numero2 = document.getElementById("numero2").value;
+			var resultado = 0;
+
+			if(numero1 == '' || isNaN(numero1))numero1 = 0;
+			if(numero2 == '' || isNaN(numero2))numero2 = 0;
+			resultado = parseFloat(numero1)+parseFloat(numero2);
+
+			if(isNaN(resultado))
+				document.getElementById("mostrarSuma").value = "Valor invalido";
+			else
+				document.getElementById("mostrarSuma").value = resultado;
+		}
+
+		function limpiar()
+		{
+			var num1 = document.getElementById("numero1");
+			var num2 = document.getElementById("numero2");
+			var res  = document.getElementById("mostrarSuma");
+
+			num1.value = 0;
+			num2.value = 0;
+			res.value  = 0;
+		}
+	</script>
+
+</body>
+</html>
